@@ -14,8 +14,7 @@ function getQuestions() {
 // quiz
 
 async function callQuestions() {
-  const url =
-    "https://opentdb.com/api.php?amount=10&difficulty=medium&type=multiple&encode=url3986";
+  const url = "https://opentdb.com/api.php?amount=10&category=31&difficulty=medium&type=multiple&encode=url3986"
   const response = await fetch(url);
   const result = await response.json();
 
@@ -53,7 +52,6 @@ function shuffleArray(array) {
 }
 
 async function putQuestions() {
-  console.log(arrayGQuestions);
   const arrayQuestions = await callQuestions();
 
   const arrayAnswers = [...arrayQuestions[0][3], arrayQuestions[0][2]];
@@ -78,7 +76,6 @@ let acertou = 0;
 
 answers.forEach((e) => {
   e.addEventListener("click", async (event) => {
-    console.log(arrayGQuestions);
     for (i in arrayGQuestions) {
       if (i < 9 && question.innerText == arrayGQuestions[i][1]) {
         var currentIndex = Number(i) + 1;
@@ -90,7 +87,6 @@ answers.forEach((e) => {
 
       if (event.target.innerText == arrayGQuestions[i][2]) {
         acertou++;
-        console.log(acertou);
       }
     }
 
@@ -119,9 +115,6 @@ function getResults() {
   const beginning = Number(sessionStorage.getItem("begin"));
   const interval = (ending - beginning) / 1000;
   const correctAns = sessionStorage.getItem("corrects");
-  console.log(ending);
-  console.log(beginning);
-  console.log(interval);
 
   time.innerText = `You concluded the quiz in ${interval} seconds`;
   corrects.innerText = `You got ${correctAns} right!`;
