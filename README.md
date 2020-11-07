@@ -1,4 +1,4 @@
-# Hacktoberfest - Desafio 1:
+# Hacktoberfest - Desafio 1 - Quiz:
 
 Desafio proposto originalmente em outubro pelo site DevChallenge. Consiste em realizar um quiz de múltiplas alternativas para resposta, e mostrar para o usuário quanto tempo demorou e quantas questões acertou.
  
