@@ -14,7 +14,7 @@ function getQuestions() {
 // quiz
 
 async function callQuestions() {
-  const url = "https://opentdb.com/api.php?amount=10&category=31&difficulty=medium&type=multiple&encode=url3986"
+  const url = "https://opentdb.com/api.php?amount=10&category=14&difficulty=easy&type=multiple&encode=url3986"
   const response = await fetch(url);
   const result = await response.json();
 
