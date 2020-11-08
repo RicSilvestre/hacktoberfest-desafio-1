@@ -25,7 +25,7 @@ header {
 }
 
 h1 {
-    font-size: 5rem;
+    font-size: clamp(2.5rem, 10vh, 5rem);
 }
 
 main {
@@ -37,7 +37,7 @@ main {
 }
 
 h2 {
-    font-size: clamp(40%, 2.5rem, 3rem);
+    font-size: clamp(2rem, 8vh, 3rem);
 
 }
 
